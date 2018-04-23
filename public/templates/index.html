@@ -1,0 +1,24 @@
+<div class="container" ng-controller="kibanaApiHelloWorld">
+    <div class="row">
+        <div class="col-12-sm">
+
+            <h1>{{ title }}</h1>
+            <h3>Create Visualizations By File</h3>
+
+            <p>Load File With Visualization Defenetion</p>
+            <a href="https://github.com/Webiks/kibana-API/blob/master/example_vis_defenetion.json">Example of json
+                file</a>
+            <input type="file" id="files" name="files[]" multiple/>
+            <br>
+            <button ng-show="finishLoad" ng-click="createVis()">Create Visualization</button>
+            <br>
+
+            <div ng-show="getResponse">
+                <p>Create Visualization Report:</p>
+                <textarea ng-model="response" style="width: 800px;height: 500px;">
+                </textarea>
+            </div>
+
+        </div>
+    </div>
+</div>
